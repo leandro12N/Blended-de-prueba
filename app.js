@@ -4,7 +4,9 @@ const app= express();
 
 app.use(express.static(path.join(__dirname,"public")));
 
-app.listen(3080, () => console.log("Servidor corriendo"));
+app.listen(process.env.PORT || 3080, () => {
+    console.log ("servidor 3080 corriendo")
+});
 
 app.get("/", function(req,res){
     res.sendFile(path.join(__dirname, "/views/home.html"))
