@@ -58,7 +58,7 @@
 }
 
 main {
-    background-image: url("/img/granos10.jpeg");
+    background-image: url("/img/granos10.jpeg"); 
     height: 100%;
     background-size: cover;
     display: flex;
