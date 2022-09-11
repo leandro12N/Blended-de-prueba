@@ -2,34 +2,39 @@ const express= require("express");
 const path= require("path");
 const app= express();
 
+app.set('view engine', 'ejs');
+app.set("views", "./views")
+
 app.use(express.static(path.join(__dirname,"public")));
 
-app.listen(3080, () => console.log("Servidor corriendo"));
+app.listen(process.env.PORT || 3080, () => {
+    console.log ("servidor 3080 corriendo")
+});
 
 app.get("/", function(req,res){
-    res.sendFile(path.join(__dirname, "/views/home.html"))
+    res.render(path.join(__dirname, "/views/home.ejs"))
 });
 
 app.get("/home", function(req,res){
-    res.sendFile(path.join(__dirname, "/views/home.html"))
+    res.render(path.join(__dirname, "/views/home.ejs"))
 });
 
 app.get("/crearCuenta", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/crearCuenta.html"))
+    res.render(path.join(__dirname,"/views/crearCuenta.ejs"))
 })
 
 app.get("/Producto", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/Producto.html"))
+    res.render(path.join(__dirname,"/views/Producto.ejs"))
 })
 
 app.get("/login", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/login.html"))
+    res.render(path.join(__dirname,"/views/login.ejs"))
 })
 
 app.get("/miCarrito", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/miCarrito.html"))
+    res.render(path.join(__dirname,"/views/miCarrito.ejs"))
 })
 
 app.get("/carritoFinal", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/carritoFinal.html"))
+    res.render(path.join(__dirname,"/views/carritoFinal.ejs"))
 })
