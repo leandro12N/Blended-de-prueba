@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "Nombre": "Warner",
+        "descripcion": "Mable",
+        "precio": 200
+    },
+    {
+        "id": 2,
+        "Nombre": "Verina",
+        "descripcion": "Tandie",
+        "precio": 300
+    },
+    {
+        "id": 3,
+        "Nombre": "Tommi",
+        "descripcion": "Ealasaid",
+        "precio": 400
+    },
+    {
+        "id": 4,
+        "Nombre ": "Gregory",
+        "descripcion": "Elnore",
+        "precio": 500
+    },
+    {
+        "id": 5,
+        "Nombre": "Des",
+        "descripcion": "Franzen",
+        "precio": 600
+    }
+]
