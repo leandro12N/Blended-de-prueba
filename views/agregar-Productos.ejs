@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ("./partials/head.ejs", {title:"agregar-Productos",
+  style:"agregar-Productos"}) %>
+
+  <body>
+    <main>
+      <%- include ("./partials/navbar.ejs") %>
+      <div class="titulo-form">
+      <h1>Agregando un Nuevo Producto</h1>
+      <form action="" method="post">
+        <div class="campos">
+          <label for="name">Nombre del producto</label>
+          <input type="text" name="name" />
+        </div>
+
+        <div class="campos">
+          <label for="precio">Precio</label>
+          <input type="text" name="precio" />
+        </div>
+
+        <div class="campos">
+          <label for="Descripcion">Descripcion</label>
+          <input type="text" name="Descripcion" />
+        </div>
+
+        <div class="campos">
+          <label for="image">Agregar Imagen</label>
+          <input type="file" name="image" />
+        </div>
+      </form>
+    </div>
+    </main>
+  </body>
+
+  <%- include ("./partials/footer.ejs") %>
+</html>

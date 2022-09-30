@@ -1,18 +1,24 @@
+//Modulos
 const express= require("express");
 const path= require("path");
 const app= express();
-const mainroutes = require ("./routers/main.js")
+const mainRoutes = require('./routers/index');
 
+
+
+//Configuracion 
+// Template Engine (Motor de plantillas - EJS)
 app.set('view engine', 'ejs');
 app.set("views", "./views")
+app.use(express.static("public"))
 
-app.use(express.static(path.join(__dirname,"public")));
+//Routers
+app.use("/", mainRoutes);
 
-app.listen(process.env.PORT || 3080, () => {
-    console.log ("servidor 3080 corriendo")
+
+app.listen(process.env.PORT || 3090, () => {
+    console.log ("servidor corriendo")
 });
 
-app.use("/", mainroutes);
 
-// app.use(usuarios);
 
