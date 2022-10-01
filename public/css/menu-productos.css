@@ -1,0 +1,57 @@
+body{
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    font-size: 3rem;
+    color: aliceblue;
+    display: flex;
+}
+article{
+    width: 20em;
+    height: 27em;
+    border: 1px solid black;
+    background-color: #eaac6ade;
+    color: white;
+    border-radius: 4%;
+}
+
+.img-container{
+    width: 100%;
+    height: 60%;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    height: 40%;
+    justify-content: flex-end;
+}
+
+.info ul{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

@@ -7,8 +7,10 @@
     <main>
       <%- include ("./partials/navbar.ejs") %>
       <div class="titulo-form">
+      
       <h1>Agregando un Nuevo Producto</h1>
-      <form action="" method="post">
+
+      <form action="/products/create" method="post">
         <div class="campos">
           <label for="name">Nombre del producto</label>
           <input type="text" name="name" />
@@ -24,10 +26,7 @@
           <input type="text" name="Descripcion" />
         </div>
 
-        <div class="campos">
-          <label for="image">Agregar Imagen</label>
-          <input type="file" name="image" />
-        </div>
+        <button type="submit">Crear</button>
       </form>
     </div>
     </main>

@@ -1,19 +1,24 @@
 //Modulos
 const express= require("express");
-const path= require("path");
 const app= express();
+const path= require("path");
+const methodOverride = require("method-override");
+
 const mainRoutes = require('./routers/index');
-
-
+const productRoutes = require('./routers/productRouter');
 
 //Configuracion 
 // Template Engine (Motor de plantillas - EJS)
 app.set('view engine', 'ejs');
-app.set("views", "./views")
-app.use(express.static("public"))
+app.set("views", "./views");
+app.use(methodOverride("_method"));
+app.use(express.static(path.join(__dirname,"./public")));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 //Routers
 app.use("/", mainRoutes);
+app.use("/products", productRoutes);
 
 
 app.listen(process.env.PORT || 3090, () => {

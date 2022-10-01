@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ("./partials/head.ejs", {title:"agregar-Productos",
+  style:"menu-productos"}) %>
+
+  <body>
+    <main>
+      <%- include ("./partials/navbar.ejs") %>
+      <div class="titulo-form">
+        <h1>Menu de productos</h1>
+        <form action="" method="post">
+          <% productos.forEach(function (cafe){ %>
+
+          <article>
+            <div class="img-container">
+              <img src="../img/imagenes descargadas/image1664418125418-.jpg" alt="cafe" />
+            </div>
+            <div class="info">
+              <p>informacion del cafe</p>
+              <ul>
+                <li>Nombre:<%= cafe.name %> </li>
+                <li>Descripcion:<%= cafe.description%></li>
+                <li>Precio:<%= cafe.price %></li>
+              </ul>
+            </div>
+          </article>
+
+          <% }) %>
+        </form>
+      </div>
+    </main>
+  </body>
+
+  <%- include ("./partials/footer.ejs") %>
+</html>
