@@ -10,20 +10,25 @@
       
       <h1>Agregando un Nuevo Producto</h1>
 
-      <form action="/products/create" method="post">
+      <form action="/products/create" enctype="multipart/form-data" method="post">
         <div class="campos">
           <label for="name">Nombre del producto</label>
           <input type="text" name="name" />
         </div>
 
         <div class="campos">
-          <label for="precio">Precio</label>
-          <input type="text" name="precio" />
+          <label for="price">Precio</label>
+          <input type="text" name="price" />
         </div>
 
         <div class="campos">
-          <label for="Descripcion">Descripcion</label>
-          <input type="text" name="Descripcion" />
+          <label for="description">Descripcion</label>
+          <input type="text" name="description" />
+        </div>
+
+        <div class="campos">
+          <label for="imagen">Cargar Imagen</label>
+          <input type="file" name="imagen" />
         </div>
 
         <button type="submit">Crear</button>

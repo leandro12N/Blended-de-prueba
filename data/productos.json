@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "name": "iugiguiu",
-        "price": "1",
-        "description": "iouohiugp",
+        "name": "cafe con leche",
+        "price": "232323",
+        "description": "manuel",
         "moliendas": [
             "Milanesa"
         ]
@@ -37,50 +37,17 @@
         ]
     },
     {
-        "id": 4,
-        "name": "cafe con queso",
-        "price": 5353,
-        "description": "khjkhjk gjhjkhjkhjk",
-        "image": "image1664418125418-.jpg",
-        "moliendas": [
-            "Prensa Francesa",
-            "Filtrado Manual",
-            "Aeropress",
-            "",
-            ""
-        ]
+        "id": 8,
+        "name": "anteultimo",
+        "price": null,
+        "description": "fklgjfldplsksk",
+        "image": "imagen1664694392146-.jpeg"
     },
     {
-        "id": 5,
-        "name": "cafe con miel",
-        "price": 4545,
-        "description": "khjkhjk gjhjkhjkhjk",
-        "image": "image1664418125418-.jpg",
-        "moliendas": [
-            "Granos",
-            "Maquina Espresso",
-            "Aeropress",
-            "",
-            ""
-        ]
-    },
-    {
-        "id": 6,
-        "name": "cafe con sal",
-        "price": 8526,
-        "description": "khjkhjk gjhjkhjkhjk",
-        "image": "image1664418125418-.jpg",
-        "moliendas": [
-            "Granos",
-            "Prensa Francesa",
-            "Filtrado Manual",
-            "",
-            ""
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Leandro",
-        "price": null
+        "id": 9,
+        "name": "antepenultimo",
+        "price": 456456456,
+        "description": "manuel",
+        "image": "imagen1664694506894-.jpeg"
     }
 ]

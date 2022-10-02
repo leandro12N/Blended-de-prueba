@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include ("./partials/head.ejs", {title:"agregar-Productos",
-  style:"editar-productos"}) %>
+<%- include ("./partials/head.ejs", {title:"agregar-Productos", style:"editar-productos"}) %>
 
   <body>
     <main>
       <%- include ("./partials/navbar.ejs") %>
-      <div class="titulo-form">
-      <h1>Editando un Producto</h1>
-      <form action="" method="post">
-        <div class="campos">
-          <label for="name">Nombre del producto</label>
-          <input type="text" name="name" />
-        </div>
+        <div class="titulo-form">
+          <h1>Editando un Producto</h1>
+          <form action="/products/edit/<%= cafe.id %>?_method=put" method="post">
+            <div class="campos">
+              <label for="name">Nombre del producto</label>
+              <input type="text" value="<%= cafe.name %>" name="name" />
+            </div>
 
-        <div class="campos">
-          <label for="precio">Precio</label>
-          <input type="text" name="precio" />
-        </div>
+            <div class="campos">
+              <label for="price">Precio</label>
+              <input type="text" value="<%= cafe.price %>" name="price" />
+            </div>
 
-        <div class="campos">
-          <label for="Descripcion">Descripcion</label>
-          <input type="text" name="Descripcion" />
-        </div>
+            <div class="campos">
+              <label for="description">Descripcion</label>
+              <input type="text" value="<%= cafe.description %>" name="description" />
+            </div>
 
-        <div class="campos">
-          <label for="image">Agregar Imagen</label>
-          <input type="file" name="image" />
+            <div class="campos">
+              <label for="image">Agregar Imagen</label>
+              <input type="file" name="image" />
+            </div>
+
+            <button type="submit">Editar</button>
+
+          </form>
+          <form action="/products/delete/<%= cafe.id %>?_method=delete" method="post">
+            <button type="submit">Borrar</button>
+          </form>
         </div>
-      </form>
-    </div>
     </main>
   </body>
 
   <%- include ("./partials/footer.ejs") %>
-</html>
 
+</html>
