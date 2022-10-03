@@ -62,6 +62,7 @@ const controllers = {
     cafeEncontrado.name = req.body.name;
     cafeEncontrado.price = req.body.price;
     cafeEncontrado.description = req.body.description;
+    cafeEncontrado.image = req.file ? req.file.filename : cafeEncontrado.image;
 
     writeFile(data);
 
