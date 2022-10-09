@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const productController = require("../controllers/productControllers");
 const multer = require("multer");
-const path = require("path")
+const path = require("path");
+const {body} = require("express-validator");
+
+const {createProductValidation} = require("../validations/productValidation")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -16,12 +19,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-
-
 router.get("/list", productController.list);
 router.get("/detail/:id", productController.detail);
 router.get("/create", productController.create);
-router.post("/create", upload.single("imagen") ,productController.store);
+router.post("/create", upload.single("imagen"),createProductValidation,productController.store);
 router.get("/edit/:id", productController.edit);
 router.put("/edit/:id", productController.update);
 router.delete("/delete/:id", productController.destroy)

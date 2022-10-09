@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const {validationResult} = require("express-validator")
 
 function findAll() {
   const jsonData = fs.readFileSync(
@@ -30,21 +31,32 @@ const controllers = {
     res.render("agregar-productos");
   },
   store: function (req, res) {
-    const data = findAll();
-    console.log(req.file);
-    const newProduct = {
-      id: data.length + 1,  //Del largo de mi array osea la cantidad de element le sumo 1 para que no pide los demas elementos
-      name: req.body.name,
-      price: Number(req.body.price), //Number transforma el string que me llega en numero
-      description: req.body.description,
-      image: req.file.filename
-    };
+    const errors = validationResult(req);
 
-    data.push(newProduct);
+    console.log(errors);
+    console.log(errors.array());
+    console.log(errors.mapped());
 
-    writeFile(data);
+  //   if(errors.isEmpty){
+  //     //errores
+  //     res.render("agregar-productos", { errors: errors.errors});
+  //   }else{
+  //   const data = findAll();
+   
+  //   const newProduct = {
+  //     id: data.length + 1,  //Del largo de mi array osea la cantidad de element le sumo 1 para que no pide los demas elementos
+  //     name: req.body.name,
+  //     price: Number(req.body.price), //Number transforma el string que me llega en numero
+  //     description: req.body.description,
+  //     image: req.file.filename
+  //   };
 
-    res.redirect("/products/list");
+  //   data.push(newProduct);
+
+  //   writeFile(data);
+
+  //   res.redirect("/products/list");
+  // }
   },
   edit: function(req,res){
     const data = findAll();
