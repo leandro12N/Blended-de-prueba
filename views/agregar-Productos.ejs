@@ -9,21 +9,36 @@
       <div class="titulo-form">
       
       <h1>Agregando un Nuevo Producto</h1>
-
+      <% if(locals.errors) { %>
+        <ul>
+          <% errors.forEach(function(error){ %> 
+              <li> <%= error.msg %> </li>
+          <% }) %> 
+        </ul>
+      <% } %> 
       <form action="/products/create" enctype="multipart/form-data" method="post">
         <div class="campos">
           <label for="name">Nombre del producto</label>
-          <input type="text" name="name" />
+          <input type="text" name="name" value="<%= locals.old ? old.name : "" %>" />
+          <% if(locals.errors2 && locals.errors2.name) { %>
+              <p><%= errors2.name.msg %> </p>
+          <% } %> 
         </div>
 
         <div class="campos">
           <label for="price">Precio</label>
-          <input type="text" name="price" />
+          <input type="text" name="price" value="<%= locals.old ? old.price : "" %>" />
+          <% if(locals.errors2 && locals.errors2.price) { %>
+            <p><%= errors2.price.msg %> </p>
+        <% } %> 
         </div>
 
         <div class="campos">
           <label for="description">Descripcion</label>
-          <input type="text" name="description" />
+          <input type="text" name="description" value="<%= locals.old ? old.description : "" %>" />
+          <% if(locals.errors2 && locals.errors2.description) { %>
+            <p><%= errors2.description.msg %> </p>
+        <% } %> 
         </div>
 
         <div class="campos">
@@ -32,6 +47,7 @@
         </div>
 
         <button type="submit">Crear</button>
+      
       </form>
     </div>
     </main>
