@@ -8,6 +8,13 @@
         <div class="titulo-form">
           <h1>Editando un Producto</h1>
           <form action="/products/edit/<%= cafe.id %>?_method=put" method="post">
+           <% if(locals.errors) { %> 
+            <ul>
+            <% errors.forEach(function(error){ %> 
+                  <li><%= error.msg %> </li>
+              <% }) %> 
+           </ul>
+           <% } %> 
             <div class="campos">
               <label for="name">Nombre del producto</label>
               <input type="text" value="<%= cafe.name %>" name="name" />

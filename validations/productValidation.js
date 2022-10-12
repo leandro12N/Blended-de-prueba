@@ -25,6 +25,18 @@ module.exports = {
         }).withMessage("imagen invalida")   
     ],
     updateProductValidation: [
+        body("name")
+            .notEmpty()
+            .withMessage("campo name incompleto")
+            .bail()
+            .isLength({ min: 6 })
+            .withMessage("Minimo 6 caracteres"),
+        body("price")
+            .notEmpty()
+            .withMessage("campo price incompleto"),
+        body("description")
+            .notEmpty()
+            .withMessage("campo description incompleto")
 
     ]
 }

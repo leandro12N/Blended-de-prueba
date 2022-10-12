@@ -3,49 +3,79 @@
 
 <%- include ("./partials/head.ejs", {title:"crearCuenta", style:"crearCuenta"}) %>
 
-<body>
-    <header>
-        <%- include ("./partials/navbar.ejs")%>
-    </header>
-    <main>
-        <div class="registro">
-            <form action="/views/home.html" method="post">
-                <p>
-                    <label for="Nombre y apellido"></label>
-                    <input type="text" placeholder="Nombre y apellido" required>
-                </p>
-                <p>
-                    <label for="Nombre de usuari@"></label>
-                    <input type="text" placeholder="Nombre de usuario" required minlength="4">
-                </p>
-                <p>
-                    <label for="Telefono"></label>
-                    <input type="tel" placeholder="Telefono">
-                </p>
-                <p>
-                    <label for="email"></label>
-                    <input type="email" placeholder="E-mail" required>
-                </p>
-                <p>
-                    <label for="Contraseña"></label>
-                    <input type="password" placeholder="Contraseña" required>
-                </p>
-                <p>
-                    <label for="Confirmar contraseña"></label>
-                    <input type="password" placeholder="Confirmar contraseña" required>
-                </p>
-                <p>
-                    <label for="Enviar"></label>
-                    <input class="efecto" type="submit">
-                </p>
-                <p>
-                    <label for="Cancelar"></label>
-                    <input class="efecto" type="reset">
-                </p>
-            </form>
-        </div>
-    </main>
-    <%- include ("./partials/footer.ejs") %>
-</body>
+    <body>
+        <header>
+            <%- include ("./partials/navbar.ejs")%>
+        </header>
+        <main>
+            <div class="registro">
+                <form action="/user/crearCuenta" method="post">
+                    <p>
+                        <label for="Nombre y apellido"></label>
+                        <input type="text" name="name" placeholder="Nombre y apellido">
+                        <% if(locals.elError && locals.elError.name) {%>
+                            <p class = "errorMsg">
+                                <%= elError.name.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="usuario"></label>
+                        <input type="text" name="usuario" placeholder="Nombre de usuario">
+                        <% if(locals.elError && locals.elError.usuario) {%>
+                            <p class = "errorMsg">
+                                <%= elError.usuario.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="Telefono"></label>
+                        <input type="tel" name="tel" placeholder="Telefono">
+                        <% if(locals.elError && locals.elError.tel) {%>
+                            <p class = "errorMsg">
+                                <%= elError.tel.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="email"></label>
+                        <input type="email" name="email" placeholder="E-mail">
+                        <% if(locals.elError && locals.elError.email) {%>
+                            <p class = "errorMsg">
+                                <%= elError.email.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="Contraseña"></label>
+                        <input type="password" name="contraseña" placeholder="Contraseña">
+                        <% if(locals.elError && locals.elError.contraseña) {%>
+                            <p class = "errorMsg">
+                                <%= elError.contraseña.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="Confirmar contraseña"></label>
+                        <input type="password" name="contraseña2" placeholder="Confirmar contraseña">
+                        <% if(locals.elError && locals.elError.contraseña2) {%>
+                            <p class = "errorMsg">
+                                <%= elError.contraseña2.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
+                        <label for="Enviar"></label>
+                        <input class="efecto" type="submit">
+                    </p>
+                    <p>
+                        <label for="Cancelar"></label>
+                        <input class="efecto" type="reset">
+                    </p>
+                </form>
+            </div>
+        </main>
+        <%- include ("./partials/footer.ejs") %>
+    </body>
 
 </html>

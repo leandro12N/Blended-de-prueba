@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "name": "cafe con leche",
-        "price": "232323",
-        "description": "manuel",
+        "name": "",
+        "price": "",
+        "description": "",
         "moliendas": [
             "Milanesa"
         ]
     },
     {
         "id": 2,
-        "name": "cafe sanjuanino",
-        "price": 98721,
-        "description": "cafe amargo con un dejo picante",
+        "name": "",
+        "price": "",
+        "description": "",
         "image": "image1663796243086-.jpg",
         "moliendas": [
             "Granos",

@@ -6,6 +6,7 @@ const methodOverride = require("method-override");
 
 const mainRoutes = require('./routers/index');
 const productRoutes = require('./routers/productRouter');
+const userRouter = require ("./routers/userRouter")
 
 //Configuracion 
 // Template Engine (Motor de plantillas - EJS)
@@ -19,6 +20,7 @@ app.use(express.json());
 //Routers
 app.use("/", mainRoutes);
 app.use("/products", productRoutes);
+app.use("/user", userRouter)
 
 
 app.listen(process.env.PORT || 3090, () => {

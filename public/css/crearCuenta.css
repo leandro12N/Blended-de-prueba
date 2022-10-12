@@ -87,6 +87,10 @@ input {
     box-shadow: black 0px 1px 1px 0px;
 }
 
+.errorMsg {
+    color: rgb(0, 3, 64);
+}
+
 .efecto:hover {
     background-color: black;
     color: white;

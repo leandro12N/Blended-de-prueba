@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "jose",
+        "usuario": "Josema",
+        "tel": 42613454,
+        "email": "josesito@gmail.com",
+        "contraseña": 1234,
+        "contraseña2": 1234
+    },
+    {
+        "id": 2,
+        "name": "carlos",
+        "usuario": "carlosema",
+        "tel": 42333454,
+        "email": "carlitos@gmail.com",
+        "contraseña": 2345,
+        "contraseña2": 2345
+    },
+    {
+        "id": 3,
+        "name": "mauro",
+        "usuario": "maurito",
+        "tel": 42443454,
+        "email": "mauriño@gmail.com",
+        "contraseña": 3456,
+        "contraseña2": 3456
+    },
+    {
+        "id": 4,
+        "name": "milanesa",
+        "usuario": "lean",
+        "tel": "42612668",
+        "email": "lea._@hotmail.com",
+        "contraseña": "$2a$10$OfDPDnv7y78MjLRB4.iQVO1WHjt22s2b7ICnq1rCFfw3.qqIbGBWS", 
+        "contraseña2": "$2a$10$IGRTplIRT5lxIsEsxAAYyuAkVWHpqguIByKw7eOm5DXNujT5UnTky"
+    }
+]

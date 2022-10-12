@@ -72,20 +72,26 @@ const controllers = {
     res.render("editar-productos", { cafe: cafeEncontrado })
   },
   update: function (req, res) {
-    const data = findAll();
-    const cafeEncontrado = data.find(function (cafe) {
-      return cafe.id == req.params.id
-    })
-
-    cafeEncontrado.name = req.body.name;
-    cafeEncontrado.price = req.body.price;
-    cafeEncontrado.description = req.body.description;
-    cafeEncontrado.image = req.file ? req.file.filename : cafeEncontrado.image;
-
-    writeFile(data);
-
-    res.redirect("/products/list");
-  },
+    const errors = validationResult(req);
+    console.log(errors);
+    if(!errors.isEmpty()){
+      res.render("editar-productos", { error: errors.array()})
+    }else{
+      const data = findAll();
+      const cafeEncontrado = data.find(function (cafe) {
+        return cafe.id == req.params.id
+      })
+      
+      cafeEncontrado.name = req.body.name;
+      cafeEncontrado.price = req.body.price;
+      cafeEncontrado.description = req.body.description;
+      cafeEncontrado.image = req.file ? req.file.filename : cafeEncontrado.image;
+      
+      writeFile(data);
+      
+      res.redirect("/products/list");
+    }
+    },
   destroy: function (req, res) {
     const data = findAll();
     const datoEncontrado = data.findIndex(function (cafe) {
