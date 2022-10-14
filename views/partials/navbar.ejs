@@ -3,7 +3,14 @@
     <ul>
         <li><a href="/"> Home</a></li>
         <li><a href="/Products/list"> Tienda</a></li>
-        <li><a href="/crearCuenta"> Cuenta</a></li>
+        <% if(!locals.usuario){ %>
+            <li><a href="/login"> Login</a></li>    
+        <% }else{ %> 
+            <h2> Hola ! <%= usuario.name %> </h2>
+            <form action="user/logout" method="post">
+                <button type="submit" class="Cerrar-seccion">Cerrar Seccion</button>
+            </form>
+        <% } %> 
         <li><a href="/carritoFinal"> Carrito</a></li>
         <li><a href="#"> Contacto</a></li>
     </ul>

@@ -9,5 +9,6 @@ router.post("/crearCuenta", validaciones.crearCuentaValidacion ,userController.p
 
 router.get("/login", userController.login);
 router.post("/login",validaciones.loginValidacion ,userController.processLogin);
+router.post("/logout", userController.logout)
 
 module.exports = router;

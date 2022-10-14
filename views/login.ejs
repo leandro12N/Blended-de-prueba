@@ -29,6 +29,13 @@
                             </p>
                             <% } %>
                     </div>
+                    <div>
+                        <input type="checkbox" name="recordarme" class="recordarme">
+                        <label for="recordarme">Recordarme</label>
+                    </div>
+                    <% if(locals.errorLogin){ %> 
+                        <p> <%= errorLogin %> </p>
+                    <% } %> 
                    
                     <div class="botones">
                         <a href="/home.ejs"><button type="submit">Iniciar sesión</button></a>

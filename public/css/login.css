@@ -80,6 +80,13 @@ form input{
     font-size: 1.3em;
     text-align: center;
 }
+.recordarme {
+    display: flex;
+    font-size: small;
+    text-align: left;
+    width: 26px;
+    margin: revert;
+}
 .botones button{
     color: white;
     background-color: peru;

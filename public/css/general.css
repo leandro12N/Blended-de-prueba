@@ -57,6 +57,10 @@
     width: 100%;
 }
 
+h2{
+    color: aliceblue;
+}
+
 @media (max-width: 680px){
     nav ul{
         display: none;

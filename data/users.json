@@ -28,11 +28,11 @@
     },
     {
         "id": 4,
-        "name": "milanesa",
+        "name": "leandro12n",
         "usuario": "lean",
         "tel": "42612668",
         "email": "lea._@hotmail.com",
-        "contraseña": "$2a$10$OfDPDnv7y78MjLRB4.iQVO1WHjt22s2b7ICnq1rCFfw3.qqIbGBWS", 
-        "contraseña2": "$2a$10$IGRTplIRT5lxIsEsxAAYyuAkVWHpqguIByKw7eOm5DXNujT5UnTky"
+        "contraseña": "$2a$10$D0VWUh5KkPP0KY1Y2HtOjeHngSCcglYpYqFBaZmdofCwO3R/OK.Sa",
+        "contraseña2": "$2a$10$1QkNoWgtq78fX7ZrBFnr3ehArJJEa1cPPOZDcAQrGIVRZN/5/aYM."
     }
 ]

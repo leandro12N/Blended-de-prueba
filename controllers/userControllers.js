@@ -46,17 +46,37 @@ module.exports = {
     login: function (req, res) {
         res.render(path.join(__dirname, "../views/login.ejs"));
     },
-    processLogin: function (req, res){
+    processLogin: function (req, res) {
         const errors = validationResult(req)
-        if (!errors.isEmpty()){
-            res.render("login", { elError: errors.mapped()})
+        if (!errors.isEmpty()) {
+            res.render("login", { elError: errors.mapped() })
         };
 
         const usuarios = findAll();
 
-        const userEncontrado = usuarios.find(function(usuario){
-
+        const userEncontrado = usuarios.find(function (usuario) {
+            return usuario.email == req.body.email && bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
         })
+
+        if (!userEncontrado) {
+            return res.render("login", { errorLogin: "Credenciales invalidas" })
+        } else {
+            req.session.usuarioLogueado = {
+                id: userEncontrado.id,
+                name: userEncontrado.name,
+                email: userEncontrado.email
+            }
+            if(req.body.recordarme){
+                res.cookie("recordarme", userEncontrado.id,)
+            }
+
+        res.redirect("/prueba")
+        }
+    },
+    logout: function (req, res){
+        req.session.destroy();
+        res.clearCookie("recordarme");
+        res.redirect("/");
     }
 };
 
