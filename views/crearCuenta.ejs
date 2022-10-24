@@ -20,24 +20,6 @@
                             <% } %>
                     </p>
                     <p>
-                        <label for="usuario"></label>
-                        <input type="text" name="usuario" placeholder="Nombre de usuario">
-                        <% if(locals.elError && locals.elError.usuario) {%>
-                            <p class = "errorMsg">
-                                <%= elError.usuario.msg %>
-                            </p>
-                            <% } %>
-                    </p>
-                    <p>
-                        <label for="Telefono"></label>
-                        <input type="tel" name="tel" placeholder="Telefono">
-                        <% if(locals.elError && locals.elError.tel) {%>
-                            <p class = "errorMsg">
-                                <%= elError.tel.msg %>
-                            </p>
-                            <% } %>
-                    </p>
-                    <p>
                         <label for="email"></label>
                         <input type="email" name="email" placeholder="E-mail">
                         <% if(locals.elError && locals.elError.email) {%>
@@ -47,20 +29,20 @@
                             <% } %>
                     </p>
                     <p>
+                        <label for="image">Agregar Imagen</label>
+                        <input type="file" name="image" />
+                        <% if(locals.elError && locals.elError.image) {%>
+                            <p class = "errorMsg">
+                                <%= elError.image.msg %>
+                            </p>
+                            <% } %>
+                    </p>
+                    <p>
                         <label for="Contraseña"></label>
                         <input type="password" name="contraseña" placeholder="Contraseña">
                         <% if(locals.elError && locals.elError.contraseña) {%>
                             <p class = "errorMsg">
                                 <%= elError.contraseña.msg %>
-                            </p>
-                            <% } %>
-                    </p>
-                    <p>
-                        <label for="Confirmar contraseña"></label>
-                        <input type="password" name="contraseña2" placeholder="Confirmar contraseña">
-                        <% if(locals.elError && locals.elError.contraseña2) {%>
-                            <p class = "errorMsg">
-                                <%= elError.contraseña2.msg %>
                             </p>
                             <% } %>
                     </p>

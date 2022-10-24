@@ -32,7 +32,21 @@
         "usuario": "lean",
         "tel": "42612668",
         "email": "lea._@hotmail.com",
-        "contraseña": "$2a$10$OfDPDnv7y78MjLRB4.iQVO1WHjt22s2b7ICnq1rCFfw3.qqIbGBWS", 
+        "contraseña": "$2a$10$OfDPDnv7y78MjLRB4.iQVO1WHjt22s2b7ICnq1rCFfw3.qqIbGBWS",
         "contraseña2": "$2a$10$IGRTplIRT5lxIsEsxAAYyuAkVWHpqguIByKw7eOm5DXNujT5UnTky"
+    },
+    {
+        "id": 5,
+        "name": "leandro12n",
+        "email": "leandromanuel291295@gmail.com",
+        "Image": "IMG_20220413_180031092.jpeg",
+        "contraseña": "$2a$10$F.NrxFIWM3bY0LKZF9lbVu0ICGObBKakwudcYGlNRQaP0HqQitSzC"
+    },
+    {
+        "id": 6,
+        "name": "milanesa",
+        "email": "alberto2@hotmail.com",
+        "Image": "IMG_20220413_180031092.jpeg",
+        "contraseña": "$2a$10$J1KKTmBJ.VhJOydZuU9Hr.BjmdbK6XCKU/4ScBSI18il85YU0AmTy"
     }
 ]

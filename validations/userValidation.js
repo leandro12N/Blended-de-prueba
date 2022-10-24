@@ -13,12 +13,6 @@ module.exports = {
         body("name")
             .notEmpty()
             .withMessage("campo name incompleto"),
-        body("usuario")
-            .notEmpty()
-            .withMessage("campo usuario incompleto"),
-        body("tel")
-            .notEmpty()
-            .withMessage("campo tel incompleto"),
         body("email")
             .notEmpty()
             .withMessage("campo email incompleto")
@@ -37,12 +31,12 @@ module.exports = {
                     return true
                 }
             }).withMessage("email ya utilizado"),
-        body("contraseña")
+            body("image")
             .notEmpty()
-            .withMessage("completar contraseña"),
-        body("contraseña2")
+            .withMessage("subir imagen"),
+            body("contraseña")
             .notEmpty()
-            .withMessage("confirmar contraseña"),
+            .withMessage("completar contraseña")
     ],
     loginValidacion: [
         body("email")

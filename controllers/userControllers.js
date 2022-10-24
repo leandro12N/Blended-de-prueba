@@ -29,11 +29,9 @@ module.exports = {
             let newUser = {
                 id: usuarios.length + 1,
                 name: req.body.name,
-                usuario: req.body.usuario,
-                tel: req.body.tel,
                 email: req.body.email,
-                contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-                contraseña2: bcryptjs.hashSync(req.body.contraseña2, 10)
+                Image: req.body.image,
+                contraseña: bcryptjs.hashSync(req.body.contraseña, 10)
             }
 
             usuarios.push(newUser);
